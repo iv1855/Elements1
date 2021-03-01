@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Elements1</string>
+    <string name="title_Settings">Настройки</string>
+    <string name="title_Result">Результат</string>
 </resources>
