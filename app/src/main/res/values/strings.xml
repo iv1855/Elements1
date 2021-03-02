@@ -2,4 +2,9 @@
     <string name="app_name">Elements1</string>
     <string name="title_Settings">Настройки</string>
     <string name="title_Result">Результат</string>
+    <string name="qty_Horizontal">Число по горизонтали</string>
+    <string name="title_CurrentSettings">Текущие настройки</string>
+    <string name="qty_Vertical">Число по вертикали</string>
+    <string name="title_Color">Цвет</string>
+    <string name="title_Size">Размер</string>
 </resources>
