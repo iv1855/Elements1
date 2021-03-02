@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -44,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         Integer i = preferences.getInt("qtyHorizontal", 0);
         lblQtyHorizontal.setText(String.format(getString(R.string.qty_Horizontal), i));
+
+        Color color = new Color();
+        String sc = color.toString();
+
 
 
     }
