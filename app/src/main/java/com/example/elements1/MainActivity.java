@@ -9,6 +9,8 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView lblQtyHorizontal;
@@ -40,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setFromSavedData() {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String str = Integer.toString(preferences.getInt("qtyHorizontal", 0));
-        lblQtyHorizontal.setText(str); ;
+        Integer i = preferences.getInt("qtyHorizontal", 0);
+        lblQtyHorizontal.setText(String.format(getString(R.string.qty_Horizontal), i));
 
 
     }
