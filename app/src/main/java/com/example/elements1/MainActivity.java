@@ -5,13 +5,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private TextView lblQtyHorizontal;
+    private TextView lblQtyVertical;
+    private TextView txtColor;
+    private TextView txtSize;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        lblQtyHorizontal = findViewById(R.id.txt_QtyHorizontal);
+        lblQtyVertical = findViewById(R.id.txt_QtyVertical);
+        txtColor = findViewById(R.id.txt_Color);
+        txtSize = findViewById(R.id.txt_Size);
+
     }
 
     public void showSettings(View view) {
@@ -23,4 +35,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ResultActivity.class);
         startActivity(intent);
     }
+
+
 }
