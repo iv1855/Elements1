@@ -2,7 +2,9 @@ package com.example.elements1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.EditText;
 
@@ -28,7 +30,11 @@ public class SettingsActivity extends AppCompatActivity {
 
     public void saveSettings(View view) {
 
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
+        Integer i = Integer.parseInt(txt_Color.getText().toString());
+
+       // preferences.edit().putInt()
 
     }
 }
