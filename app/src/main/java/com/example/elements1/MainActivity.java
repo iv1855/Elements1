@@ -55,13 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         i = preferences.getInt("Color", 0);
         txtColor.setText(String.format(getString(R.string.title_Color), i));
-
-
-
-
-
-
-
+        txtColor.setBackgroundColor(i);
 
     }
 
