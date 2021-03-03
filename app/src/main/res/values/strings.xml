@@ -5,6 +5,6 @@
     <string name="qty_Horizontal">Число по горизонтали %d</string>
     <string name="title_CurrentSettings">Текущие настройки</string>
     <string name="qty_Vertical">Число по вертикали %d</string>
-    <string name="title_Color">Цвет %s</string>
+    <string name="title_Color">Цвет %d</string>
     <string name="title_Size">Размер %d</string>
 </resources>
