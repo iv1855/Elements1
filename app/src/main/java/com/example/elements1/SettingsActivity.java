@@ -32,9 +32,18 @@ public class SettingsActivity extends AppCompatActivity {
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        Integer i = Integer.parseInt(txt_Color.getText().toString());
+        int i = Integer.parseInt(txt_Color.getText().toString());
+        preferences.edit().putInt(getString(R.string.key_Color), i).apply();
 
-       // preferences.edit().putInt()
+        i = Integer.parseInt(txt_Size.getText().toString());
+        preferences.edit().putInt(getString(R.string.key_Size), i).apply();
+
+        i = Integer.parseInt(txt_QtyVertical.getText().toString());
+        preferences.edit().putInt(getString(R.string.key_QtyVert), i).apply();
+
+        i = Integer.parseInt(txt_QtyHorizontal.getText().toString());
+        preferences.edit().putInt(getString(R.string.key_QtyHoriz), i).apply();
+
 
     }
 }

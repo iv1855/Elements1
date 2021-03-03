@@ -10,4 +10,8 @@
     <string name="title_SetSettings">Установить настройки</string>
     <string name="enter_Color">Введите цвет</string>
     <string name="enter_Size">Введите размер</string>
+    <string name="key_QtyHoriz">qtyHorizontal</string>
+    <string name="key_QtyVert">qtyVertical</string>
+    <string name="key_Size">Size</string>
+    <string name="key_Color">Color</string>
 </resources>

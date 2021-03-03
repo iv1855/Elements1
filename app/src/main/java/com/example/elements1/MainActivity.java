@@ -46,16 +46,16 @@ public class MainActivity extends AppCompatActivity {
     private void setFromSavedData() {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        int i = preferences.getInt("qtyHorizontal", 0);
+        int i = preferences.getInt(getString(R.string.key_QtyHoriz), 0);
         lblQtyHorizontal.setText(String.format(getString(R.string.qty_Horizontal), i));
 
-        i = preferences.getInt("qtyVertical", 0);
+        i = preferences.getInt(getString(R.string.key_QtyVert), 0);
         lblQtyVertical.setText(String.format(getString(R.string.qty_Vertical), i));
 
-        i = preferences.getInt("Size", 0);
+        i = preferences.getInt(getString(R.string.key_Size), 0);
         txtSize.setText(String.format(getString(R.string.title_Size), i));
 
-        i = preferences.getInt("Color", 0);
+        i = preferences.getInt(getString(R.string.key_Color), 0);
         txtColor.setText(String.format(getString(R.string.title_Color), i));
         txtColor.setBackgroundColor(i);
 
