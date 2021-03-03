@@ -7,4 +7,7 @@
     <string name="qty_Vertical">Число по вертикали %d</string>
     <string name="title_Color">Цвет %d</string>
     <string name="title_Size">Размер %d</string>
+    <string name="title_SetSettings">Установить настройки</string>
+    <string name="enter_Color">Введите цвет</string>
+    <string name="enter_Size">Введите размер</string>
 </resources>

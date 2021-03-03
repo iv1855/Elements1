@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         txtColor = findViewById(R.id.txt_Color);
         txtSize = findViewById(R.id.txt_Size);
 
+        setFromSavedData();
+
     }
 
     public void showSettings(View view) {
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private void setFromSavedData() {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        Integer i = preferences.getInt("qtyHorizontal", 0);
+        int i = preferences.getInt("qtyHorizontal", 0);
         lblQtyHorizontal.setText(String.format(getString(R.string.qty_Horizontal), i));
 
         i = preferences.getInt("qtyVertical", 0);
