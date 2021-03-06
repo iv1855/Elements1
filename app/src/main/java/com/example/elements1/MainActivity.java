@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,7 +41,48 @@ public class MainActivity extends AppCompatActivity {
    }
 
     public void showResult(View view) {
+
         Intent intent = new Intent(this, ResultActivity.class);
+        Pattern pattern = Pattern.compile("\\d+");
+        String s;
+        int i;
+
+        Matcher matcher = pattern.matcher(txtSize.getText().toString());
+        if (matcher.find()) {
+            s = matcher.group();
+        }else {
+            s = "0";
+        }
+        i = Integer.parseInt(s);
+        intent.putExtra(getString(R.string.key_Size), i);
+
+        matcher = pattern.matcher(txtColor.getText().toString());
+        if (matcher.find()) {
+            s = matcher.group();
+        } else {
+            s = "0";
+        }
+        i = Integer.parseInt(s);
+        intent.putExtra(getString(R.string.key_Color), i);
+
+        matcher = pattern.matcher(lblQtyHorizontal.getText().toString());
+        if (matcher.find()) {
+            s = matcher.group();
+        } else {
+            s = "0";
+        }
+        i = Integer.parseInt(s);
+        intent.putExtra(getString(R.string.key_QtyHorizontal), i);
+
+        matcher = pattern.matcher(lblQtyVertical.getText().toString());
+        if (matcher.find()) {
+            s = matcher.group();
+        } else {
+            s = "0";
+        }
+        i = Integer.parseInt(s);
+        intent.putExtra(getString(R.string.key_QtyVertical), i);
+
         startActivity(intent);
     }
 

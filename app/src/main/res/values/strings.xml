@@ -14,4 +14,6 @@
     <string name="key_QtyVert">qtyVertical</string>
     <string name="key_Size">Size</string>
     <string name="key_Color">Color</string>
+    <string name="key_QtyHorizontal">QtyHorizontal</string>
+    <string name="key_QtyVertical">QtyVertical</string>
 </resources>

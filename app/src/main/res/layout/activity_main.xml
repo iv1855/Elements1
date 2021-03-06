@@ -22,6 +22,7 @@
         android:layout_marginTop="50dp"
         android:onClick="showResult"
         android:text="@string/title_Result"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_HeaderSettings"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/btn_OpenSettingsActivity" />
 
@@ -58,6 +59,7 @@
         android:id="@+id/lbl_HeaderSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/title_CurrentSettings"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
