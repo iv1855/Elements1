@@ -16,5 +16,5 @@
     <string name="key_Color">Color</string>
     <string name="key_QtyHorizontal">QtyHorizontal</string>
     <string name="key_QtyVertical">QtyVertical</string>
-    <string name="txtAllData">Размер: %d/nЦвет: %d/nШирина: %d/nВысота: %d</string>
+    <string name="txtAllData">Размер: %d\nЦвет: %d\nШирина: %d\nВысота: %d</string>
 </resources>

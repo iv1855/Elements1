@@ -38,5 +38,6 @@ public class ResultActivity extends AppCompatActivity {
 
         String s = String.format(getString(R.string.txtAllData), Size, Color, qty_H, qty_V);
         txtViewAllData.setText(s);
+        txtViewAllData.setBackgroundColor(Color);
     }
 }
