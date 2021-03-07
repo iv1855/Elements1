@@ -3,6 +3,7 @@ package com.example.elements1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -38,6 +39,7 @@ public class ResultActivity extends AppCompatActivity {
 
         String s = String.format(getString(R.string.txtAllData), Size, Color, qty_H, qty_V);
         txtViewAllData.setText(s);
-        txtViewAllData.setBackgroundColor(Color);
+        int ColorWithAlfa = 0xFF000000 + Color;
+        txtViewAllData.setBackgroundColor(ColorWithAlfa);
     }
 }
