@@ -8,10 +8,28 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="220dp"
-        android:layout_height="411dp"
-        android:background="?attr/colorAccent"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:background="?attr/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintStart_toEndOf="@+id/view2"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <androidx.constraintlayout.widget.Guideline
