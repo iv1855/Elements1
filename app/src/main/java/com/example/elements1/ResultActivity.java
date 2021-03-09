@@ -1,13 +1,16 @@
 package com.example.elements1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +24,7 @@ public class ResultActivity extends AppCompatActivity {
     private int qty_V;
 
     private TextView txtViewAllData;
+    private ConstraintLayout mainConstrLayout;
 
 
     @Override
@@ -29,6 +33,7 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         txtViewAllData = findViewById(R.id.txtView_AllData);
+        mainConstrLayout = findViewById(R.id.MainConstraintLayout);
 
         Intent intent = getIntent();
         if (intent.hasExtra(getString(R.string.key_QtyVertical))
@@ -63,13 +68,18 @@ public class ResultActivity extends AppCompatActivity {
         int width = configuration.screenWidthDp;
         int height = configuration.screenHeightDp;
 
-
+        makeOneElement();
 
     }
 
+    private void makeOneElement() {
+        Context context = getApplicationContext();
 
+        View view4 = new View(context);
+        view4.setBackgroundColor(Color.RED);
 
-
+        mainConstrLayout.addView(view4);
+    }
 
 
 }
