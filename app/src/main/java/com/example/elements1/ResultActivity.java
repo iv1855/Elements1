@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,7 +42,7 @@ public class ResultActivity extends AppCompatActivity {
         }
 
         String s = String.format(getString(R.string.txtAllData), size, color, qty_H, qty_V);
-        txtViewAllData.setOnClickListener(new View.OnClickListener() {
+        txtViewAllData.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 Context context = getApplicationContext();
@@ -57,10 +59,15 @@ public class ResultActivity extends AppCompatActivity {
     private void makeAllElements(int size, int color, int qtyH, int qtyV) {
 
         Toast.makeText(getApplicationContext(), "MakeElements!", Toast.LENGTH_SHORT).show();
+        Configuration configuration = this.getResources().getConfiguration();
+        int width = configuration.screenWidthDp;
+        int height = configuration.screenHeightDp;
 
 
 
     }
+
+
 
 
 

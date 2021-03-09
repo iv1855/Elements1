@@ -7,28 +7,42 @@
     tools:context=".ResultActivity">
 
     <View
+        android:id="@+id/view4"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_orange_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <View
         android:id="@+id/view"
         android:layout_width="48dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
         android:background="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view4"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <View
         android:id="@+id/view2"
         android:layout_width="48dp"
         android:layout_height="50dp"
-        android:background="?attr/colorAccent"
-        app:layout_constraintStart_toEndOf="@+id/view"
+        android:background="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toEndOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <View
         android:id="@+id/view3"
         android:layout_width="48dp"
         android:layout_height="50dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@android:color/holo_green_dark"
+        app:layout_constraintStart_toEndOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_red_dark"
         app:layout_constraintStart_toEndOf="@+id/view2"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
@@ -37,7 +51,52 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.51" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/holo_purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view6" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/holo_red_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view7" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view8" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/holo_blue_bright"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view9" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_orange_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtView_AllData"
