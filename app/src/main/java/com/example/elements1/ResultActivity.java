@@ -90,8 +90,8 @@ public class ResultActivity extends AppCompatActivity {
         myBtn.setBackgroundColor(Color.YELLOW);
 
         ConstraintSet set = new ConstraintSet();
-        set.constrainHeight(R.id.myBtnId, ConstraintSet.WRAP_CONTENT);
-        set.constrainWidth(R.id.myBtnId, ConstraintSet.WRAP_CONTENT);
+        set.constrainHeight(myBtn.getId(), ConstraintSet.WRAP_CONTENT);
+        set.constrainWidth(myBtn.getId(), ConstraintSet.WRAP_CONTENT);
 
         set.applyTo(mainConstrLayout);
 
