@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -73,12 +74,23 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     private void makeOneElement() {
-        Context context = getApplicationContext();
+//        Context context = getApplicationContext();
+//
+//        View view4 = new View(context);
+//        view4.setBackgroundColor(Color.RED);
+//
+//        mainConstrLayout.addView(view4);
 
-        View view4 = new View(context);
-        view4.setBackgroundColor(Color.RED);
+        Button myBtn = new Button(this);
 
-        mainConstrLayout.addView(view4);
+        myBtn.setId(R.id.myBtnId);
+        myBtn.setText("Press me!");
+        myBtn.setBackgroundColor(Color.YELLOW);
+
+        mainConstrLayout.addView(myBtn);
+
+
+
     }
 
 
