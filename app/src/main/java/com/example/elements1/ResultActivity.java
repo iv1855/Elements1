@@ -83,6 +83,7 @@ public class ResultActivity extends AppCompatActivity {
 //        mainConstrLayout.addView(view4);
 
         Button myBtn = new Button(this);
+        mainConstrLayout.addView(myBtn);
 
         myBtn.setId(R.id.myBtnId);
         myBtn.setText("Press me!");
@@ -94,7 +95,6 @@ public class ResultActivity extends AppCompatActivity {
 
         set.applyTo(mainConstrLayout);
 
-        mainConstrLayout.addView(myBtn);
 
 
 
