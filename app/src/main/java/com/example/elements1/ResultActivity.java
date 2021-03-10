@@ -93,6 +93,15 @@ public class ResultActivity extends AppCompatActivity {
         set.constrainHeight(myBtn.getId(), ConstraintSet.WRAP_CONTENT);
         set.constrainWidth(myBtn.getId(), ConstraintSet.WRAP_CONTENT);
 
+        set.connect(myBtn.getId(), ConstraintSet.LEFT,
+                ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 0);
+        set.connect(myBtn.getId(), ConstraintSet.RIGHT,
+                ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, 0);
+        set.connect(myBtn.getId(), ConstraintSet.TOP,
+                ConstraintSet.PARENT_ID, ConstraintSet.TOP, 0);
+        set.connect(myBtn.getId(), ConstraintSet.BOTTOM,
+                ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM, 0);
+
         set.applyTo(mainConstrLayout);
 
 
