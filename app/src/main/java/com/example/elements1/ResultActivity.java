@@ -2,6 +2,7 @@ package com.example.elements1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 
 import android.content.Context;
 import android.content.Intent;
@@ -86,6 +87,12 @@ public class ResultActivity extends AppCompatActivity {
         myBtn.setId(R.id.myBtnId);
         myBtn.setText("Press me!");
         myBtn.setBackgroundColor(Color.YELLOW);
+
+        ConstraintSet set = new ConstraintSet();
+        set.constrainHeight(R.id.myBtnId, ConstraintSet.WRAP_CONTENT);
+        set.constrainWidth(R.id.myBtnId, ConstraintSet.WRAP_CONTENT);
+
+        set.applyTo(mainConstrLayout);
 
         mainConstrLayout.addView(myBtn);
 
