@@ -85,7 +85,13 @@ public class ResultActivity extends AppCompatActivity {
 //        mainConstrLayout.addView(view4);
 
         Button myBtn = new Button(this);
+        View v1 = new View(this);
+
         mainConstrLayout.addView(myBtn);
+        mainConstrLayout.addView(v1);
+
+
+        v1.setId(22);
 
         myBtn.setId(R.id.myBtnId);
         myBtn.setText("Press me!");
