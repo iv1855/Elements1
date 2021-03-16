@@ -93,6 +93,7 @@ public class ResultActivity extends AppCompatActivity {
 
         v1.setId(22);
 
+
         myBtn.setId(R.id.myBtnId);
         myBtn.setText("Press me!");
         myBtn.setBackgroundColor(Color.YELLOW);
