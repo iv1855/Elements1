@@ -27,6 +27,7 @@ public class ResultActivity extends AppCompatActivity {
 
     private TextView txtViewAllData;
     private ConstraintLayout mainConstrLayout;
+    private View view3;
 
 
     @Override
@@ -36,6 +37,7 @@ public class ResultActivity extends AppCompatActivity {
 
         txtViewAllData = findViewById(R.id.txtView_AllData);
         mainConstrLayout = findViewById(R.id.MainConstraintLayout);
+        view3 = findViewById(R.id.view3 );
 
         Intent intent = getIntent();
         if (intent.hasExtra(getString(R.string.key_QtyVertical))
@@ -91,10 +93,10 @@ public class ResultActivity extends AppCompatActivity {
 
         ConstraintSet set = new ConstraintSet();
         set.constrainHeight(myBtn.getId(), ConstraintSet.WRAP_CONTENT);
-        set.constrainWidth(myBtn.getId(), ConstraintSet.WRAP_CONTENT);
+//        set.constrainWidth(myBtn.getId(), ConstraintSet.WRAP_CONTENT);
 
         set.connect(myBtn.getId(), ConstraintSet.LEFT,
-                ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 0);
+                view3.getId(), ConstraintSet.RIGHT, 0);
         set.connect(myBtn.getId(), ConstraintSet.RIGHT,
                 ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, 0);
         set.connect(myBtn.getId(), ConstraintSet.TOP,
