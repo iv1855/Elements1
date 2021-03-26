@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -72,7 +73,33 @@ public class ResultActivity extends AppCompatActivity {
         int width = configuration.screenWidthDp;
         int height = configuration.screenHeightDp;
 
-        makeOneElement();
+//        makeOneElement();
+
+        View[][] arrViews = new View[qtyH][qtyV];
+        Context context = getApplicationContext();
+        ConstraintSet constraintSet = new ConstraintSet();
+
+
+        for (int i = 0; i <= qtyH; i++) {
+            for (int j = 0; j <= qtyV; j++) {
+                View v = new View(context);
+                int currID = i * 100 + j;
+                v.setId(currID);
+                v.setBackgroundColor(color + currID * 100);
+//                ViewGroup.LayoutParams LayoutParams = new LayoutParams();
+                LayoutParams layoutParams = v.getLayoutParams();
+                layoutParams.width = size;
+                layoutParams.height = size;
+                v.setLayoutParams(layoutParams);
+                arrViews[i][j] = v;
+                mainConstrLayout.addView(v);
+
+          }
+       }
+
+
+
+
 
     }
 
