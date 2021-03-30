@@ -80,8 +80,8 @@ public class ResultActivity extends AppCompatActivity {
         ConstraintSet constraintSet = new ConstraintSet();
 
 
-        for (int i = 0; i <= qtyH; i++) {
-            for (int j = 0; j <= qtyV; j++) {
+        for (int i = 0; i < qtyH; i++) {
+            for (int j = 0; j < qtyV; j++) {
                 View v = new View(context);
                 int currID = i * 100 + j;
                 v.setId(currID);
