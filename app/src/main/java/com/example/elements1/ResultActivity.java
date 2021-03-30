@@ -86,10 +86,10 @@ public class ResultActivity extends AppCompatActivity {
                 int currID = i * 100 + j;
                 v.setId(currID);
                 v.setBackgroundColor(color + currID * 100);
-//                ViewGroup.LayoutParams LayoutParams = new LayoutParams();
-                LayoutParams layoutParams = v.getLayoutParams();
-                layoutParams.width = size;
-                layoutParams.height = size;
+                ViewGroup.LayoutParams layoutParams = new LayoutParams(size, size);
+                //LayoutParams layoutParams = v.getLayoutParams();
+//                layoutParams.width = size;
+//                layoutParams.height = size;
                 v.setLayoutParams(layoutParams);
                 arrViews[i][j] = v;
                 mainConstrLayout.addView(v);
