@@ -103,6 +103,7 @@ public class ResultActivity extends AppCompatActivity {
         for (int i = 0; i <= arrViews.length; i++) {
             for (int j = 0; j <= arrViews[0].length; j++) {
                 if (i == 0 && j == 0) {
+                    set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT);
 
                 }
 
@@ -114,14 +115,14 @@ public class ResultActivity extends AppCompatActivity {
 
 
 
-        set.connect(myBtn.getId(), ConstraintSet.LEFT,
-                view3.getId(), ConstraintSet.RIGHT, 0);
-        set.connect(myBtn.getId(), ConstraintSet.RIGHT,
-                ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, 0);
-        set.connect(myBtn.getId(), ConstraintSet.TOP,
-                ConstraintSet.PARENT_ID, ConstraintSet.TOP, 0);
-        set.connect(myBtn.getId(), ConstraintSet.BOTTOM,
-                ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM, 0);
+//        set.connect(myBtn.getId(), ConstraintSet.LEFT,
+//                view3.getId(), ConstraintSet.RIGHT, 0);
+//        set.connect(myBtn.getId(), ConstraintSet.RIGHT,
+//                ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, 0);
+//        set.connect(myBtn.getId(), ConstraintSet.TOP,
+//                ConstraintSet.PARENT_ID, ConstraintSet.TOP, 0);
+//        set.connect(myBtn.getId(), ConstraintSet.BOTTOM,
+//                ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM, 0);
 
 
 
