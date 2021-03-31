@@ -21,15 +21,15 @@
         android:layout_height="50dp"
         android:background="@drawable/ic_launcher_background"
         app:layout_constraintStart_toEndOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
     <View
         android:id="@+id/view3"
         android:layout_width="48dp"
         android:layout_height="50dp"
         android:background="@android:color/holo_green_dark"
-        app:layout_constraintStart_toEndOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
