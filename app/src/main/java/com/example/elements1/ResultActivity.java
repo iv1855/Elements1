@@ -57,8 +57,8 @@ public class ResultActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Context context = getApplicationContext();
 //                Toast.makeText(context, "Clicked!", Toast.LENGTH_SHORT).show();
-//                makeAllElements(size, color, qty_H, qty_V);
-                makeOneElement();
+                makeAllElements(size, color, qty_H, qty_V);
+//                makeOneElement();
             }
         });
 
@@ -79,9 +79,33 @@ public class ResultActivity extends AppCompatActivity {
 //        id
         myBtn.setId(100 * 1 + 1);
 //        backgrColor
-        myBtn.setBackgroundColor(colorWithAlfa + 10000 * 1);
+        myBtn.setBackgroundColor(colorWithAlfa + 100000 * 1);
 //        text
         myBtn.setText("1");
+
+//        AddToLayout
+        mainConstrLayout.addView(myBtn);
+
+//        SetConstraints
+        set.constrainWidth(myBtn.getId(), ConstraintSet.WRAP_CONTENT);
+        set.constrainHeight(myBtn.getId(), ConstraintSet.WRAP_CONTENT);
+
+        set.connect(myBtn.getId(), ConstraintSet.LEFT,
+                ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 0);
+        set.connect(myBtn.getId(), ConstraintSet.RIGHT,
+                ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, 0);
+        set.connect(myBtn.getId(), ConstraintSet.TOP,
+                ConstraintSet.PARENT_ID, ConstraintSet.TOP, 0);
+        set.connect(myBtn.getId(), ConstraintSet.BOTTOM,
+                ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM, 0);
+
+//        Apply Constrains To Layout
+        set.applyTo(mainConstrLayout);
+
+
+
+
+
 
 
 
