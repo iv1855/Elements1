@@ -73,7 +73,8 @@ public class ResultActivity extends AppCompatActivity {
         ConstraintSet set = new ConstraintSet();
 
 //        Creation
-        Button myBtn = new Button(this);
+//        Button myBtn = new Button(this);
+        View myBtn = new View(this);
 
 //        SetProperties
 //        id
@@ -81,14 +82,14 @@ public class ResultActivity extends AppCompatActivity {
 //        backgrColor
         myBtn.setBackgroundColor(colorWithAlfa + 100000 * 1);
 //        text
-        myBtn.setText("1");
+//        myBtn.setText("1");
 
 //        AddToLayout
         mainConstrLayout.addView(myBtn);
 
 //        SetConstraints
-        set.constrainWidth(myBtn.getId(), ConstraintSet.WRAP_CONTENT);
-        set.constrainHeight(myBtn.getId(), ConstraintSet.WRAP_CONTENT);
+        set.constrainWidth(myBtn.getId(), 30);
+        set.constrainHeight(myBtn.getId(), 30);
 
         set.connect(myBtn.getId(), ConstraintSet.LEFT,
                 ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 0);
