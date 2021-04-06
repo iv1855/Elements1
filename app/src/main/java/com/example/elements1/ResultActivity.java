@@ -76,64 +76,64 @@ public class ResultActivity extends AppCompatActivity {
         ConstraintSet set = new ConstraintSet();
         View[][] arrViews = new View[qtyH][qtyV];
 
-//        Creation
-//        Button myBtn = new Button(this);
-        View myBtn = new View(this);
-
-//        SetProperties
-//        id
-        myBtn.setId(10 * 1 + 1);
-//        backgrColor
-        myBtn.setBackgroundColor(colorWithAlfa + 100000 * 1);
-//        text
-//        myBtn.setText("1");
-
-//        AddToLayout
-        mainConstrLayout.addView(myBtn);
-
-//        SetConstraints
-        set.constrainWidth(myBtn.getId(), 30);
-        set.constrainHeight(myBtn.getId(), 50);
-
-//        set.connect(myBtn.getId(), ConstraintSet.LEFT,
-//                ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 0);
-        set.connect(myBtn.getId(), ConstraintSet.RIGHT,
-                ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, 0);
-        set.connect(myBtn.getId(), ConstraintSet.TOP,
-                ConstraintSet.PARENT_ID, ConstraintSet.TOP, 0);
-//        set.connect(myBtn.getId(), ConstraintSet.BOTTOM,
-//                ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM, 0);
+////        Creation
+////        Button myBtn = new Button(this);
+//        View myBtn = new View(this);
+//
+////        SetProperties
+////        id
+//        myBtn.setId(10 * 1 + 1);
+////        backgrColor
+//        myBtn.setBackgroundColor(colorWithAlfa + 100000 * 1);
+////        text
+////        myBtn.setText("1");
+//
+////        AddToLayout
+//        mainConstrLayout.addView(myBtn);
+//
+////        SetConstraints
+//        set.constrainWidth(myBtn.getId(), 30);
+//        set.constrainHeight(myBtn.getId(), 50);
+//
+////        set.connect(myBtn.getId(), ConstraintSet.LEFT,
+////                ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 0);
+//        set.connect(myBtn.getId(), ConstraintSet.RIGHT,
+//                ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, 0);
+//        set.connect(myBtn.getId(), ConstraintSet.TOP,
+//                ConstraintSet.PARENT_ID, ConstraintSet.TOP, 0);
+////        set.connect(myBtn.getId(), ConstraintSet.BOTTOM,
+////                ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM, 0);
 
         for (int i = 0; i < 1; i++) {
             for (int j = 0; j < 1; j++) {
-                View v = new View(this);
+                View v1 = new View(this);
                 int currID = i * 100 + j + 10;
-                v.setId(currID);
-                v.setBackgroundColor(colorWithAlfa + currID * 10000);
-                arrViews[i][j] = v;
-                mainConstrLayout.addView(v);
+                v1.setId(currID);
+                v1.setBackgroundColor(colorWithAlfa + currID * 10000);
+                arrViews[i][j] = v1;
+                mainConstrLayout.addView(v1);
 
-                set.constrainWidth(v.getId(), 30);
-                set.constrainHeight(v.getId(), 50);
+                set.constrainWidth(v1.getId(), 30);
+                set.constrainHeight(v1.getId(), 50);
             }
         }
 
         for (int i = 0; i <= arrViews.length; i++) {
             for (int j = 0; j <= arrViews[0].length; j++) {
-//                if (i == 0 && j == 0) {
-                if (i == 0 && j == 0) {
-                    set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT);
-                    set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, g4.getId(), ConstraintSet.BOTTOM);
-                } else if (i == 0 && j != 0) {
-                    set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, arrViews[i][j - 1].getId(), ConstraintSet.LEFT);
-                    set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, arrViews[i][j - 1].getId(), ConstraintSet.TOP);
-                } else if (i != 0 && j == 0) {
-                    set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT);
-                    set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, arrViews[i][j].getId(), ConstraintSet.BOTTOM);
-                }
+                if (arrViews[i][j] == null) {
+                    if (i == 0 && j == 0) {
+                        set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT);
+                        set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, g4.getId(), ConstraintSet.BOTTOM);
+                    } else if (i == 0 && j != 0) {
+                        set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, arrViews[i][j - 1].getId(), ConstraintSet.LEFT);
+                        set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, arrViews[i][j - 1].getId(), ConstraintSet.TOP);
+                    } else if (i != 0 && j == 0) {
+                        set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT);
+                        set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, arrViews[i][j].getId(), ConstraintSet.BOTTOM);
+                    }
 
+                }
             }
-//            }
         }
 
 
