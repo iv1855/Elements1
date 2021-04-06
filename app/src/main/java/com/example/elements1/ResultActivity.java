@@ -124,12 +124,12 @@ public class ResultActivity extends AppCompatActivity {
                     if (i == 0 && j == 0) {
                         set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT);
                         set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, g4.getId(), ConstraintSet.BOTTOM);
-                    } else if (i == 0 && j != 0) {
+                    } else if (j != 0) {
                         set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, arrViews[i][j - 1].getId(), ConstraintSet.LEFT);
                         set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, arrViews[i][j - 1].getId(), ConstraintSet.TOP);
                     } else if (i != 0 && j == 0) {
                         set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT);
-                        set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, arrViews[i][j].getId(), ConstraintSet.BOTTOM);
+                        set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, arrViews[i - 1][j].getId(), ConstraintSet.BOTTOM);
                     }
 
                 }
