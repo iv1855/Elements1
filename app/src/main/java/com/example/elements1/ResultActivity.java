@@ -120,7 +120,7 @@ public class ResultActivity extends AppCompatActivity {
 
         for (int i = 0; i <= arrViews.length; i++) {
             for (int j = 0; j <= arrViews[0].length; j++) {
-                if (arrViews[i][j] == null) {
+                if (arrViews[i][j] != null) {
                     if (i == 0 && j == 0) {
                         set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT);
                         set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, g4.getId(), ConstraintSet.BOTTOM);
