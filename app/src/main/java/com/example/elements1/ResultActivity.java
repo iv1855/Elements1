@@ -109,12 +109,12 @@ public class ResultActivity extends AppCompatActivity {
                 View v1 = new View(this);
                 int currID = i * 100 + j + 10;
                 v1.setId(currID);
-                v1.setBackgroundColor(colorWithAlfa + currID * 10000);
+                v1.setBackgroundColor(colorWithAlfa + currID * 1000);
                 arrViews[i][j] = v1;
                 mainConstrLayout.addView(v1);
 
                 set.constrainWidth(v1.getId(), 30);
-                set.constrainHeight(v1.getId(), 50);
+                set.constrainHeight(v1.getId(), 30);
             }
         }
 
