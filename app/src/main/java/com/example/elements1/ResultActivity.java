@@ -3,6 +3,7 @@ package com.example.elements1;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.constraintlayout.widget.Guideline;
 
 import android.content.Context;
 import android.content.Intent;
@@ -29,6 +30,7 @@ public class ResultActivity extends AppCompatActivity {
     private TextView txtViewAllData;
     private ConstraintLayout mainConstrLayout;
     private View view3;
+    private Guideline g4;
 
 
     @Override
@@ -38,7 +40,8 @@ public class ResultActivity extends AppCompatActivity {
 
         txtViewAllData = findViewById(R.id.txtView_AllData);
         mainConstrLayout = findViewById(R.id.MainConstraintLayout);
-        view3 = findViewById(R.id.view3 );
+        view3 = findViewById(R.id.view3);
+        g4 = findViewById(R.id.guideline4);
 
         Intent intent = getIntent();
         if (intent.hasExtra(getString(R.string.key_QtyVertical))
@@ -71,6 +74,7 @@ public class ResultActivity extends AppCompatActivity {
 
         int colorWithAlfa = 0xFF000000 + color;
         ConstraintSet set = new ConstraintSet();
+        View[][] arrViews = new View[qtyH][qtyV];
 
 //        Creation
 //        Button myBtn = new Button(this);
@@ -78,7 +82,7 @@ public class ResultActivity extends AppCompatActivity {
 
 //        SetProperties
 //        id
-        myBtn.setId(100 * 1 + 1);
+        myBtn.setId(10 * 1 + 1);
 //        backgrColor
         myBtn.setBackgroundColor(colorWithAlfa + 100000 * 1);
 //        text
@@ -89,27 +93,52 @@ public class ResultActivity extends AppCompatActivity {
 
 //        SetConstraints
         set.constrainWidth(myBtn.getId(), 30);
-        set.constrainHeight(myBtn.getId(), 30);
+        set.constrainHeight(myBtn.getId(), 50);
 
-        set.connect(myBtn.getId(), ConstraintSet.LEFT,
-                ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 0);
+//        set.connect(myBtn.getId(), ConstraintSet.LEFT,
+//                ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 0);
         set.connect(myBtn.getId(), ConstraintSet.RIGHT,
                 ConstraintSet.PARENT_ID, ConstraintSet.RIGHT, 0);
         set.connect(myBtn.getId(), ConstraintSet.TOP,
                 ConstraintSet.PARENT_ID, ConstraintSet.TOP, 0);
-        set.connect(myBtn.getId(), ConstraintSet.BOTTOM,
-                ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM, 0);
+//        set.connect(myBtn.getId(), ConstraintSet.BOTTOM,
+//                ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM, 0);
+
+        for (int i = 0; i < 1; i++) {
+            for (int j = 0; j < 1; j++) {
+                View v = new View(this);
+                int currID = i * 100 + j + 10;
+                v.setId(currID);
+                v.setBackgroundColor(colorWithAlfa + currID * 10000);
+                arrViews[i][j] = v;
+                mainConstrLayout.addView(v);
+
+                set.constrainWidth(v.getId(), 30);
+                set.constrainHeight(v.getId(), 50);
+            }
+        }
+
+        for (int i = 0; i <= arrViews.length; i++) {
+            for (int j = 0; j <= arrViews[0].length; j++) {
+//                if (i == 0 && j == 0) {
+                if (i == 0 && j == 0) {
+                    set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT);
+                    set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, g4.getId(), ConstraintSet.BOTTOM);
+                } else if (i == 0 && j != 0) {
+                    set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, arrViews[i][j - 1].getId(), ConstraintSet.LEFT);
+                    set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, arrViews[i][j - 1].getId(), ConstraintSet.TOP);
+                } else if (i != 0 && j == 0) {
+                    set.connect(arrViews[i][j].getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT);
+                    set.connect(arrViews[i][j].getId(), ConstraintSet.TOP, arrViews[i][j].getId(), ConstraintSet.BOTTOM);
+                }
+
+            }
+//            }
+        }
+
 
 //        Apply Constrains To Layout
         set.applyTo(mainConstrLayout);
-
-
-
-
-
-
-
-
 
 
 //        Toast.makeText(getApplicationContext(), "MakeElements!", Toast.LENGTH_SHORT).show();
@@ -117,7 +146,6 @@ public class ResultActivity extends AppCompatActivity {
 //        int width = configuration.screenWidthDp;
 //        int height = configuration.screenHeightDp;
 //
-//        View[][] arrViews = new View[qtyH][qtyV];
 //        Context context = getApplicationContext();
 //        ConstraintSet constraintSet = new ConstraintSet();
 //
@@ -186,8 +214,6 @@ public class ResultActivity extends AppCompatActivity {
                 ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM, 0);
 
         set.applyTo(mainConstrLayout);
-
-
 
 
     }
