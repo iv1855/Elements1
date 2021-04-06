@@ -104,8 +104,8 @@ public class ResultActivity extends AppCompatActivity {
 ////        set.connect(myBtn.getId(), ConstraintSet.BOTTOM,
 ////                ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM, 0);
 
-        for (int i = 0; i < 1; i++) {
-            for (int j = 0; j < 1; j++) {
+        for (int i = 0; i < qtyH; i++) {
+            for (int j = 0; j < qtyV; j++) {
                 View v1 = new View(this);
                 int currID = i * 100 + j + 10;
                 v1.setId(currID);
